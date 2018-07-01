@@ -1,0 +1,38 @@
+doctype html
+html
+  head
+    meta(charset="utf-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    meta(name="description", content=description)
+    title= title
+    meta(name="viewport", content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no")
+    link(rel="shortcut icon", href="images/favicon.ico")
+    link(rel="stylesheet", href="css/style.css")
+  body
+    section.hero.is-success.is-fullheight
+      .hero-body
+        .container.has-text-centered
+          .column.is-10.is-offset-1
+            h3.title.has-text-grey Currency Converter
+            p.subtitle.has-text-grey 7DaysofCodeChallenge
+            .box
+              .columns
+              .field
+                .control
+                  .columns
+                    .column.is-3
+                      .select.is-primary.is-large.js-currencies
+                    .column.is-9
+                      input.input.is-large.js-value(type='number', value='1.00', min='0.00', step='0.01')
+              .field
+                .control
+                  .columns
+                    .column.is-3
+                      .select.js-currencies.is-primary.is-large
+                    .column.is-9
+                      input.input.is-large.js-value(type='number', value='0.00', min='0.00', step='0.01', disabled='')
+              button.button.is-block.is-info.is-large.is-fullwidth.js-convert
+                i.fas.fa-exchange-alt
+                  | Convert
+
+    script(type="text/javascript", src="js/app.bundle.js")
